@@ -1,0 +1,35 @@
+/* components/Toast/Toast.wxss */
+
+.new-toast-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-toast-out .new-toast-in {
+  /* min-width: 330rpx; */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 21rpx 19rpx;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+  position: relative;
+  top: -55rpx;
+}
+
+.new-toast-out .new-toast-in span {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.new-toast-out .new-toast-in .toast-txt {
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+}

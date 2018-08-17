@@ -1,0 +1,9 @@
+<!--components/Toast/Toast.wxml-->
+<view class="new-toast">
+    <view class='new-toast-out' wx:if='{{isShow}}'>
+      <cover-view class='new-toast-in'>
+        <cover-view class='toast-txt'>{{txt}}</cover-view>
+      </cover-view>
+    </view>
+</view>
+<!--components/Toast/Toast.wxml-->

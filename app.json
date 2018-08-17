@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/food/food",
+    "pages/home/home",
+    "pages/checkbox/checkbox"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Jacket",
+    "navigationBarTextStyle":"black"
+  }
+}

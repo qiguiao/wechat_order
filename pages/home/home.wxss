@@ -1,0 +1,131 @@
+/* pages/home/home.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  width: 199rpx;
+  height: 75rpx;
+  /* background: lime; */
+  border: 1rpx dashed #ccc;
+  border-radius: 50rpx;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn>view {
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 75rpx;
+}
+
+.btn-cilcle {
+  position: absolute;
+  width: 75rpx;
+  height: 75rpx;
+  background: red;
+  border-radius: 50rpx;
+  transition: all 0.5s ease;
+}
+
+.right {
+  animation: myfirst 1s ease;
+  left: 120rpx;
+}
+
+.left {
+  animation: myfirst2 1s ease;
+  left: 0;
+}
+
+.rightBG {
+  background: limegreen;
+  transition: all 0.5s ease;
+}
+
+.leftBG {
+  background: #f1f1f1;
+  transition: all 0.5s ease;
+}
+
+@keyframes myfirst {
+  10% {
+    transform: rotate(130deg);
+  }
+
+  100% {
+    transform: rotate(700deg);
+  }
+}
+
+@keyframes myfirst2 {
+  10% {
+    transform: rotate(-130deg);
+  }
+
+  100% {
+    transform: rotate(-700deg);
+  }
+}
+
+.box {
+  width: 100%;
+  height: 83%;
+  border: 1rpx dashed #ccc;
+  margin-bottom: 5rpx;
+}
+
+.change {
+  display: flex;
+}
+
+.inp {
+  width: 80%;
+  height: 75rpx;
+  border: 1rpx dotted #ccc;
+  margin-bottom: 19rpx;
+}
+
+.change-btn {
+  width: 19%;
+  height: 75rpx;
+  text-align: center;
+  line-height: 75rpx;
+  background: #eee;
+  color: #c1c1c1;
+  margin-left: 1%;
+}
+
+.inp input {
+  width: 100%;
+  height: 100%;
+  padding-left: 15rpx;
+  color: #ccc;
+  font-size: 24rpx;
+}
+
+.pl-class {
+  font-size: 24rpx;
+}
+
+/*弹幕飞飞飞*/
+
+.barrage-fly {
+  z-index: 3;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.barrage-textFly {
+  position: absolute;
+}

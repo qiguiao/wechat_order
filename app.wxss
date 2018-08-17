@@ -1,0 +1,46 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+view{
+  box-sizing: border-box;
+}
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.new-toast-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-toast-out .new-toast-in {
+  /* min-width: 330rpx; */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 21rpx 20rpx;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}
+.new-toast-out .new-toast-in span {
+  font-size: 30rpx;
+  color: #FFFFFF;
+}
+.new-toast-out .new-toast-in .toast-txt {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  text-align: center;
+}

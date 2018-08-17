@@ -1,0 +1,13 @@
+<!--pages/checkbox/checkbox.wxml-->
+<view class='list' wx:for="{{listArr}}" wx:key="{{index}}" data-index="{{index}}" catchtap='check' data-bool="{{item.bool}}">
+    <view class='list-img'>
+      <image src='{{item.bool?imgArr[1]:imgArr[0]}}'></image>
+    </view>
+    <view>{{item.name}}</view>
+</view>
+<view>
+<button bindtap='btn'>btn</button></view>
+
+<view class='select-list {{bool?"transShow":""}}'>
+  ppppppp
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "自助选餐",
+  "usingComponents": {
+    "new-toast": "/components/new-toast/new-toast"
+  }
+}

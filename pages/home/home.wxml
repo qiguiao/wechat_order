@@ -1,0 +1,18 @@
+<view class='home'>
+  <view class='box'>
+    <block wx:for="{{barrage_style}}" wx:key="{{index}}">
+      <text class="barrage-textFly" style="color:{{item.barrage_shoottextColor}};left:{{item.barrage_phoneWidth}}px;top:{{item.barrageText_height}}px;">{{item.barrage_shootText}}</text>
+    </block>
+  </view>
+  <view class='change'>
+    <view class='inp'>
+      <input placeholder-class="pl-class" bindinput="TextV" value='{{value}}' placeholder="弹幕发送[]~(^v^)~*"></input>
+    </view>
+    <view class='change-btn' catchtap='send'>Send</view>
+  </view>
+  <view class='btn {{right?"rightBG":"leftBG"}}' catchtap='event'>
+    <image src='{{right?imgArr[1]:imgArr[0]}}' class='btn-cilcle {{right?"right":"left"}}' catchtap='event'></image>
+    <view>{{right?"不开心":"开心"}}</view>
+  </view>
+
+</view>

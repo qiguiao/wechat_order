@@ -1,0 +1,68 @@
+<view class='food-container'>
+  <view class='title-msg' wx:if="{{leftMoved<=320}}">
+    <text style='position:relative;left:{{leftMoved}}rpx'>点击logo有意想不到效果哦</text>
+  </view>
+  <view class='food-logo {{clsBool?"rotate1":""}}' bindtap='logoEvent'>
+    <image src='../../static/img/logo.jpeg'></image>
+  </view>
+  <view class='change-food {{clsBool?"none":"block"}}' wx:if="{{true}}">
+    <view class='food-left'>
+      <view class='left-item {{selectClass==item.id?"bg":""}}' bindtap='leftEvent' wx:for="{{leftArr}}" wx:key="{{index}}" data-id='{{item.id}}' data-objIndex="{{item.objIndex}}">{{item.name}}</view>
+    </view>
+    <view class='food-right'>
+      <view wx:for="{{rightArr}}" wx:key="{{index}}" data-item="{{item}}" bindtap='rightEvent' class='right-item {{bgSelect[item.id]?"bgWhite":""}}'>
+        <view>{{item.name}}</view>
+        <view class='money'>价格:
+          <text class='price'>{{item.pirce}}</text>
+        </view>
+        <view>推荐系数:
+          <text class='recommend'>{{item.remord}}</text>
+        </view>
+        <view class='hot-img' wx:if="{{item.remord>=3}}"><image src='../../static/img/hot.png'></image></view>
+      </view>
+
+    </view>
+  </view>
+  <view class='food-list' wx:if="{{!clsBool}}">
+    <view class='list-change'>已选择</view>
+    <view class='seleted-list' wx:for="{{selectArr}}" wx:key="{{index}}">
+      <view class='list-name'>菜品名称: {{item.name}}</view>
+      <view class='list-num'>菜品数量: *1</view>
+      <view class='list-price'>菜品价格: {{item.num}}.00</view>
+    </view>
+    <view class='all-price' wx:if="{{selectArr.length}}">总计金额: {{allMoney}}.00元</view>
+    <view class='order' wx:if="{{selectArr.length}}" bindtap="orderEvent">我已确认即刻下单</view>
+  </view>
+
+
+  <view class=' {{clsBool?"top400":"opcaty"}}'>
+    <view class='box-casual'>
+      <view class='casual' bindtap='casualEvent'>随心所欲的菜单(随机)</view>
+      <view class='btn {{right?"rightBG":"leftBG"}}' catchtap='event'>
+        <image src='{{right?imgArr[1]:imgArr[0]}}' class='btn-cilcle {{right?"right":"left"}}' catchtap='event'></image>
+        <view>{{right?"不开心":"开心"}}</view>
+      </view>
+    </view>
+    <view class='food-list' wx:if="{{suijiArr.length}}">
+      <view class='list-change'>随机菜单已选择</view>
+      <view class='seleted-list' wx:for="{{suijiArr}}" wx:key="{{index}}" wx:if="{{item}}">
+        <view class='list-name'>菜品名称: {{item.name}}</view>
+        <view class='list-num'>菜品数量: *1</view>
+        <view class='list-price'>菜品价格: {{item.num}}.00</view>
+      </view>
+      <view class='all-price' wx:if="{{suijiArr.length}}">总计金额: {{suijiMoney}}.00元</view>
+    </view>
+  </view>
+
+
+
+
+  <view style='height:500rpx'></view>
+  <view style='height:500rpx'></view>
+
+  <view style='height:500rpx'></view>
+
+  <view style='height:500rpx'></view>
+
+</view>
+<new-toast class="msg-toast"></new-toast>
